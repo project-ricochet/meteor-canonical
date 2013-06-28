@@ -53,7 +53,7 @@ if (process.env.ROOT_URL) {
     if (!isLocal && !alreadyCanonical) {
       // connection is not cool. send a 302 redirect!
 
-      res.writeHead(302, {
+      res.writeHead(301, {
         'Location': process.env.ROOT_URL + req.url
       });
       res.end();
