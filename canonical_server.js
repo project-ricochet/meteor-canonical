@@ -41,8 +41,14 @@ if (process.env.ROOT_URL) {
     // Oh, you think figuring out protocol is straightforward? lol
     // var protocol = req.protocol; // No.
 
+    // Determine if the connection was over SSL at any point. Either we
+    // received it as SSL, or a proxy did and translated it for us.
+    var isSsl = req.connection.pair ||
+      (req.headers['x-forwarded-proto'] &&
+        req.headers['x-forwarded-proto'].indexOf('https') !== -1);
+
     // Pretty naive assumption here (what if it's, I dunno, ftp?), but we don't have much else to go on.
-    var protocol = (req.headers['x-forwarded-proto'] && req.headers['x-forwarded-proto'] === "http") ? "http" : "https";
+    var protocol = isSsl ? "https" : "http";
 
     var urlBase = protocol + "://" + host;
 
