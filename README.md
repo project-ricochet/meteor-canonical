@@ -24,3 +24,12 @@ Change the `VARIABLE=value` parts before `meteor` to use different environment v
 `PACKAGE_CANONICAL_DISABLE`: Set to `true` to never redirect anyone.
 
 `PACKAGE_CANONICAL_SIMULATE_REMOTE`: Set to `true` if you want to test that the package is working *locally*. You will have to set up another way to access your app; for example, you might edit your `hosts` file. If this variable is set, then `canonical` will redirect to the `ROOT_URL` when you access your local app via the alternate URL. You will also want to set `ROOT_URL` when you run `meteor`, as illustrated above.
+
+
+---------------
+
+Package sponsored by:
+
+[Project Ricochet](http://projectricochet.com): [drupal development](http://projectricochet.com/drupal-development), [node js](http://projectricochet.com/node-js), [phonegap](http://projectricochet.com/phonegap), and [Meteor JS](http://projectricochet.com/meteor-js) development experts
+
+[Pushpin Planner](http://www.pushpinplanner.com): [Resource planning software](http://pushpinplanner.com) and [ERP software](http://pushpinplanner.com) for agile teams
