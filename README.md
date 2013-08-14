@@ -1,7 +1,7 @@
 Canonical URLs for Meteor
 ================
 
-This package was inspired by the `force-ssl` package that comes with Meteor. Whereas force-ssl only forwards your site to https if your site visitor goes to http, meteor-canonical will forward to whatever url you want - in particlar, to www.yoursite.com if someone visits just yoursite.com. This is important for your SEO because you don't want your site/content being found at both www and non-www. 
+This package was inspired by the `force-ssl` package that comes with Meteor. Whereas force-ssl only forwards your site to https if your site visitor goes to http, meteor-canonical will forward to whatever url you want - in particlar, to www.yoursite.com if someone visits just yoursite.com. This is important for your SEO because you don't want your site/content being found at both www and non-www.
 
 **Note: Unless you pass [additional options](#additional-options), this package does nothing locally. And you will need to set an environment variable in the environment you deploy to.**
 
@@ -23,7 +23,7 @@ Change the `VARIABLE=value` parts before `meteor` to use different environment v
 
 `PACKAGE_CANONICAL_DISABLE`: Set to `true` to never redirect anyone.
 
-`PACKAGE_CANONICAL_SIMULATE_REMOTE`: Set to `true` if you want to test that the package is working *locally*. You will have to set up another way to access your app; for example, you might edit your `hosts` file. If this variable is set, then `canonical` will redirect to the `ROOT_URL` when you access your local app via the alternate URL. You will also want to set `ROOT_URL` when you run `meteor`, as illustrated above.
+`PACKAGE_CANONICAL_SIMULATE_PRODUCTION`: Set to `true` if you want to test that the package is working *locally*. You will have to set up another way to access your app; for example, you might edit your `hosts` file. If this variable is set, then `canonical` will redirect to the `ROOT_URL` when you access your local app via the alternate URL. You will also want to set `ROOT_URL` when you run `meteor`, as illustrated above.
 
 
 ---------------
