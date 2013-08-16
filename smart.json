@@ -3,6 +3,6 @@
   "description": "Redirect users to the official URL for accessing your app (ROOT_URL)",
   "homepage": "https://github.com/projectricochet/meteor-canonical",
   "author": "Project Ricochet (http://projectricochet.com)",
-  "version": "0.0.4",
+  "version": "0.0.4.1",
   "git": "https://github.com/projectricochet/meteor-canonical.git"
 }
