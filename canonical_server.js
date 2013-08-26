@@ -8,7 +8,13 @@ if (process.env.ROOT_URL) {
   // an approach similar to overshadowListeners in
   // https://github.com/sockjs/sockjs-node/blob/cf820c55af6a9953e16558555a31decea554f70e/src/utils.coffee
 
-  var httpServer = __meteor_bootstrap__.httpServer;
+  if (typeof WebApp !== 'undefined') {
+    var httpServer = WebApp.httpServer;
+  } else {
+    var httpServer = __meteor_bootstrap__.httpServer;
+  };
+
+
   var oldHttpServerListeners = httpServer.listeners('request').slice(0);
   httpServer.removeAllListeners('request');
   httpServer.addListener('request', function (req, res) {
