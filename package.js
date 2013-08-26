@@ -4,6 +4,7 @@ Package.describe({
 
 Package.on_use(function (api) {
   api.use('underscore', 'server');
+  api.use('webapp', 'server');
   // make sure we come after livedata, so we load after the sockjs
   // server has been instantiated.
   api.use('livedata', 'server');
