@@ -3,6 +3,10 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  if (typeof api.export !== 'undefined') {
+    api.use('webapp', 'server');
+  };
+
   api.use('underscore', 'server');
   // make sure we come after livedata, so we load after the sockjs
   // server has been instantiated.
